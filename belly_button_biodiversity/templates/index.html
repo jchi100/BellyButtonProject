@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Belly Button Biodiversity Dashboard</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.7.3/d3.min.js"></script>
+  
+    
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    
+        <div class="container myfont">
+                <div class="row">
+                        <div class="col-md-12 jumbotron text-center">
+                            Belly Button Biodiversity Dashboard
+                            <p class="mystyle" >Use the interactive charts below to explore the dataset</p>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="well">
+                             <p class="myheaderstyle">Select Sample:</p>
+                            <select id="selDataset" onchange="optionChanged(this.value)">
+                                
+                            </select>
+                        </div>
+                        <div class="mytablestyle">
+                               <p class="myheaderstyle">Sample Metadata</p>
+                                <div class="">
+                                       <table class="table table-striped">
+                                           <tbody>
+
+                                           </tbody>
+                                       </table>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div id="pie"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div id="gauge"></div>
+                    </div>
+                </div>
+            </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   <script src="{{url_for('static', filename='plots.js') }}"></script> 
+  
+
+</body>
+</html>
